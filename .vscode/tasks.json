@@ -1,38 +1,15 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "ui:dev",
-      "type": "shell",
-      "isBackground": true,
-      "command": "npm",
-      "args": [
-        "run",
-        "tauri",
-        "dev"
-      ],
-      "problemMatcher": ["$tsc-watch"]
-    },
-    {
-      "label": "ui:build",
-      "type": "shell",
-      "command": "npm",
-      "args": [
-        "run",
-        "tauri",
-        "build"
-      ],
-      "problemMatcher": ["$tsc"],
-      "isBackground": false
-    },
-    {
+      "label": "start-dev-server",
       "type": "npm",
-      "script": "tauri",
-      "problemMatcher": ["$tsc"],
-      "label": "npm: tauri",
-      "detail": "Tauri Build Task"
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": ["$tsc-watch"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     }
   ]
 }
