@@ -12,7 +12,7 @@
           "--no-default-features"
         ]
       },
-      "preLaunchTask": "start-dev-server"
+      "preLaunchTask": "start-server"
     }
   ]
 }
